@@ -1,3 +1,3 @@
-@include('header')
+@include('custom_layout.header')
 @include('blog_content')
-@include('footer')
+@include('custom_layout.footer')

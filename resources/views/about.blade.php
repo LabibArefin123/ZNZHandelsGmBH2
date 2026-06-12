@@ -1,4 +1,4 @@
-@include('header')
+@include('custom_layout.header')
 @include('about_content')
 
-@include('footer')
+@include('custom_layout.footer')
