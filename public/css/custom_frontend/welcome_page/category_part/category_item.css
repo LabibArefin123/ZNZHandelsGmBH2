@@ -1,0 +1,89 @@
+
+.category-item {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45px 1fr 30px;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 5px;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.category-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: #111;
+    transition: height 0.35s ease;
+}
+
+.category-item-number {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.category-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.category-item i {
+    justify-self: end;
+    font-size: 15px;
+    color: #aaa;
+    opacity: 0;
+    transform: translate(-5px, 5px);
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    padding-left: 15px;
+    background: #fafafa;
+}
+
+.category-item:hover .category-item-name {
+    color: #111;
+}
+
+.category-item:hover i {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.category-item.active {
+    padding-left: 15px;
+    background: #f8f8f8;
+}
+
+.category-item.active::before {
+    height: 100%;
+}
+
+.category-item.active .category-item-number {
+    color: #111;
+}
+
+.category-item.active .category-item-name {
+    color: #111;
+    font-weight: 700;
+}
+
+.category-item.active i {
+    opacity: 1;
+    color: #111;
+    transform: translate(0, 0);
+}

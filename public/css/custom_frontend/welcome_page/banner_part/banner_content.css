@@ -1,0 +1,78 @@
+/* =========================================================
+   BANNER CONTENT
+========================================================= */
+
+#heroCarousel .carousel-item .col-xl-10 {
+    padding: 30px;
+}
+
+#heroCarousel .carousel-item .text-dark {
+    max-width: 720px;
+}
+
+#heroCarousel .carousel-item h6 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px !important;
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #555;
+    line-height: 1.5;
+}
+
+#heroCarousel .carousel-item h6::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: #222;
+}
+
+#heroCarousel .carousel-item h2 {
+    margin-bottom: 22px !important;
+    font-size: clamp(38px, 5vw, 72px) !important;
+    font-weight: 800 !important;
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    color: #111;
+}
+
+#heroCarousel .carousel-item p {
+    max-width: 620px;
+    margin-bottom: 28px !important;
+    font-size: 17px !important;
+    line-height: 1.8;
+    color: #555;
+}
+
+#heroCarousel .carousel-item .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 24px;
+    border: 1px solid #111;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+#heroCarousel .carousel-item .btn-dark i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+#heroCarousel .carousel-item .btn-dark:hover {
+    background: #fff;
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#heroCarousel .carousel-item .btn-dark:hover i {
+    transform: translateX(4px);
+}

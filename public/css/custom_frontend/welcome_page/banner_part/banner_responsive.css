@@ -1,0 +1,118 @@
+/* =========================================================
+   BANNER RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199.98px) {
+    #heroCarousel .carousel-item h2 {
+        font-size: clamp(38px, 6vw, 60px) !important;
+    }
+    #heroCarousel .carousel-item p {
+        max-width: 560px;
+    }
+}
+@media (max-width: 991.98px) {
+    #heroCarousel .carousel-item::before {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.84) 0%,
+            rgba(255, 255, 255, 0.7) 55%,
+            rgba(255, 255, 255, 0.38) 100%
+        );
+    }
+    #heroCarousel .carousel-item .row {
+        justify-content: center !important;
+        text-align: center;
+    }
+    #heroCarousel .carousel-item .text-dark {
+        margin: auto;
+        max-width: 700px;
+    }
+    #heroCarousel .carousel-item h6 {
+        justify-content: center;
+    }
+    #heroCarousel .carousel-item p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #heroCarousel .carousel-item .d-flex {
+        justify-content: center !important;
+    }
+    #heroCarousel .carousel-control-prev {
+        left: 15px;
+    }
+    #heroCarousel .carousel-control-next {
+        right: 15px;
+    }
+}
+@media (max-width: 767.98px) {
+    #heroCarousel .carousel-item {
+        min-height: 85vh;
+    }
+    #heroCarousel .carousel-item .row {
+        min-height: 85vh;
+    }
+    #heroCarousel .carousel-item .col-xl-10 {
+        padding: 25px 45px;
+    }
+    #heroCarousel .carousel-item h2 {
+        font-size: clamp(34px, 9vw, 48px) !important;
+        letter-spacing: -1px;
+    }
+    #heroCarousel .carousel-item p {
+        font-size: 15px !important;
+        line-height: 1.7;
+    }
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        width: 42px;
+        height: 42px;
+        margin-top: -21px;
+    }
+    #heroCarousel .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+@media (max-width: 575.98px) {
+    #heroCarousel .carousel-item {
+        min-height: 78vh;
+    }
+    #heroCarousel .carousel-item .row {
+        min-height: 78vh;
+    }
+    #heroCarousel .carousel-item .col-xl-10 {
+        padding: 25px 35px;
+    }
+    #heroCarousel .carousel-item h6 {
+        font-size: 10px !important;
+        letter-spacing: 2px;
+    }
+    #heroCarousel .carousel-item h6::before {
+        width: 22px;
+    }
+    #heroCarousel .carousel-item h2 {
+        font-size: 34px !important;
+        line-height: 1.12;
+    }
+    #heroCarousel .carousel-item p {
+        font-size: 14px !important;
+    }
+    #heroCarousel .carousel-item .btn-dark {
+        padding: 11px 20px;
+        font-size: 11px;
+    }
+    #heroCarousel .carousel-item .d-flex a {
+        width: 34px;
+        height: 34px;
+    }
+    #heroCarousel .carousel-item .d-flex a i {
+        font-size: 13px !important;
+    }
+    #heroCarousel .carousel-control-prev {
+        left: 8px;
+    }
+    #heroCarousel .carousel-control-next {
+        right: 8px;
+    }
+}

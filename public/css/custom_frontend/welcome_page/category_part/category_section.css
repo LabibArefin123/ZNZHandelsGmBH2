@@ -1,0 +1,62 @@
+/* CATEGORY SECTION */
+.category-section {
+    position: relative;
+    padding: 110px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.category-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.category-heading {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.category-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.category-eyebrow::before,
+.category-eyebrow::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: #222;
+}
+
+.category-heading h2 {
+    margin: 0 0 18px;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    color: #111;
+}
+
+.category-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #777;
+}
+
+.category-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
+    gap: 70px;
+    align-items: center;
+}

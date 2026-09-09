@@ -1,0 +1,56 @@
+/* =========================================================
+ABOUT SECTION
+========================================================= */
+
+.about-section {
+    position: relative;
+    padding: 110px 0;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+.about-wrapper {
+    position: relative;
+    padding: 70px 80px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+.about-heading {
+    margin-bottom: 55px;
+}
+.about-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: #777;
+}
+.about-eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: #111;
+}
+.about-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+.about-number {
+    padding-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+.about-title-row h2 {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #111;
+}
