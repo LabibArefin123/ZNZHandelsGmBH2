@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/welcome_page/banner_part/banner_responsive.css') }}">
     <div class="carousel-inner">
         <!-- First Slide -->
-        <div class="carousel-item active" style="background: url('img/hero/hero-1.jpg') center/cover no-repeat;">
+        <div class="carousel-item active" style="background: url('images/hero/hero-1.jpg') center/cover no-repeat;">
             <div class="container h-100">
                 <div class="row min-vh-100 align-items-center justify-content-center text-center text-lg-start">
                     <div class="col-xl-10 col-lg-8 col-md-10 p-3">
@@ -29,7 +29,7 @@
             </div>
         </div>
         <!-- Second Slide -->
-        <div class="carousel-item" style="background: url('img/hero/hero-2.jpg') center/cover no-repeat;">
+        <div class="carousel-item" style="background: url('images/hero/hero-2.jpg') center/cover no-repeat;">
             <div class="container h-100">
                 <div class="row min-vh-100 align-items-center justify-content-center text-center text-lg-start">
                     <div class="col-xl-10 col-lg-8 col-md-10 p-3">
