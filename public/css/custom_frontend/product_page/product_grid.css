@@ -1,0 +1,114 @@
+.product-results {
+    min-width: 0;
+}
+.product-results-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+.product-results-head h2 {
+    margin: 0;
+    color: #202020;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+.product-results-head p {
+    margin: 0;
+    color: #999;
+    font-size: 11px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 38px 24px;
+}
+.product-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+.product-item.product-hiding {
+    opacity: 0;
+    transform: translateY(18px);
+}
+.product-item.product-hidden {
+    display: none;
+}
+.product-item.product-showing {
+    animation: productReveal 0.5s ease both;
+}
+@keyframes productReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.product-empty {
+    display: none;
+    padding: 90px 20px;
+    text-align: center;
+}
+.product-empty.show {
+    display: block;
+    animation: productEmptyReveal 0.45s ease both;
+}
+@keyframes productEmptyReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.product-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border: 1px solid #e3dfd9;
+    border-radius: 50%;
+    color: #b08a45;
+    font-size: 20px;
+}
+.product-empty h3 {
+    margin: 0 0 9px;
+    color: #222;
+    font-size: 20px;
+    font-weight: 600;
+}
+.product-empty p {
+    margin: 0 0 22px;
+    color: #999;
+    font-size: 12px;
+}
+.product-empty button {
+    padding: 11px 22px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+.product-empty button:hover {
+    background: #b08a45;
+    transform: translateY(-2px);
+}
+ 

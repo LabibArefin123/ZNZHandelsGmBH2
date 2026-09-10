@@ -18,7 +18,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse navbar-expand-lg" id="navbarNav">
                         <ul class="navbar-nav header-nav-list">
                             <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>

@@ -1,3 +1,5 @@
+@extends('frontend.shared_layout.app')
+
 <div class="container mt-5">
         <h2 class="text-center mb-5">Latest Blogs</h2>
 

@@ -7,7 +7,7 @@
 
 .footer-main {
     position: relative;
-    padding: 85px 0 25px;
+    padding: 25px 0 25px;
     background: #111;
 }
 
@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: 1.25fr 0.65fr 1fr;
     gap: 90px;
-    padding-bottom: 65px;
+    padding-bottom: 15px;
 }
 
 .footer-brand {
