@@ -1,0 +1,13 @@
+.news-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+}

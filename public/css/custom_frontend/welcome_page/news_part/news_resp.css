@@ -1,0 +1,119 @@
+@media (max-width: 1199.98px) {
+    .news-section {
+        padding: 95px 0;
+    }
+    .news-grid {
+        gap: 20px;
+    }
+    .news-image-wrap {
+        height: 270px;
+    }
+    .news-card-content {
+        padding: 25px;
+    }
+    .news-card-content h3 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .news-section {
+        padding: 85px 0;
+    }
+    .news-heading {
+        margin-bottom: 50px;
+    }
+    .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .news-card:last-child {
+        grid-column: 1/-1;
+        max-width: calc(50% - 10px);
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news-section {
+        padding: 75px 0;
+    }
+    .news-heading {
+        margin-bottom: 45px;
+    }
+    .news-heading h2 {
+        font-size: 46px;
+        letter-spacing: -1.5px;
+    }
+    .news-heading p {
+        max-width: 540px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .news-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+    .news-image-wrap {
+        height: 300px;
+    }
+    .news-card-content {
+        padding: 26px 25px 28px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .news-section {
+        padding: 60px 0;
+    }
+    .news-heading {
+        margin-bottom: 40px;
+    }
+    .news-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.2px;
+        margin-bottom: 15px;
+    }
+    .news-heading h2 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+    .news-heading p {
+        margin-top: 18px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    .news-grid {
+        gap: 18px;
+    }
+    .news-image-wrap {
+        height: 240px;
+    }
+    .news-category {
+        top: 12px;
+        left: 12px;
+        padding: 6px 9px;
+        font-size: 8px;
+    }
+    .news-card-content {
+        padding: 22px 20px 24px;
+    }
+    .news-date {
+        font-size: 8px;
+    }
+    .news-card-content h3 {
+        font-size: 18px;
+    }
+    .news-card-content p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+    .news-footer {
+        margin-top: 40px;
+    }
+}

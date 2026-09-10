@@ -8,7 +8,6 @@
             <div class="about-heading">
                 <span class="about-eyebrow">Who We Are</span>
                 <div class="about-title-row">
-                    <span class="about-number">01</span>
                     <h2>About Us</h2>
                 </div>
             </div>
