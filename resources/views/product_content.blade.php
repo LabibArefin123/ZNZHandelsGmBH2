@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/custom_frontend/product_page/product_card.css') }}">
 <link rel="stylesheet" href="{{ asset('css/custom_frontend/product_page/product_responsive.css') }}">
 
-<section class="product-page">  
+<section class="product-page">
     <div class="container">
 
         <div class="product-header">
@@ -197,127 +197,56 @@
                     </div>
                     <p id="productResultText">Showing all available products</p>
                 </div>
-
                 <div class="product-grid" id="productGrid">
-
-                    <article class="product-item" data-name="Readymade Garment 1" data-category="men clothing"
-                        data-brand="gucci" data-price="67.24" data-size="s m l xl"
-                        data-tags="product fashion clothing">
-                        <div class="product-card">
-                            <div class="product-image-wrap">
-                                <span class="product-badge">Featured</span>
-                                <img src="{{ asset('images/product_page/readymate garment 1.jpg') }}" alt="Readymade Garment 1"
-                                    class="product-image">
-                                <div class="product-card-overlay">
-                                    <button type="button" class="product-card-action product-wishlist"
-                                        aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                                    <button type="button" class="product-quick-view"><i
-                                            class="bi bi-eye"></i><span>Quick View</span></button>
+                    @foreach ($products as $product)
+                        <article class="product-item" data-name="{{ strtolower($product->name) }}"
+                            data-category="{{ $product->category }}" data-brand="{{ strtolower($product->brand) }}"
+                            data-price="{{ $product->price }}"
+                            data-size="{{ strtolower(implode(' ', $product->sizes ?? [])) }}"
+                            data-tags="{{ strtolower(implode(' ', $product->tags ?? [])) }}">
+                            <div class="product-card">
+                                <div class="product-image-wrap">
+                                    @if ($product->badge)
+                                        <span class="product-badge">{{ $product->badge }}</span>
+                                    @endif
+                                    <img src="{{ asset($product->image) }}" alt="{{ $product->name }}"
+                                        class="product-image">
+                                    <div class="product-card-overlay">
+                                        <button type="button" class="product-card-action product-wishlist"
+                                            aria-label="Add to wishlist">
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <a href="{{ route('product.view', $product) }}" class="product-quick-view">
+                                            <i class="bi bi-eye"></i>
+                                            <span>View Product</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-card-body">
+                                    <span class="product-category">
+                                        {{ ucfirst($product->category) }}
+                                        @if ($product->brand)
+                                            / {{ $product->brand }}
+                                        @endif
+                                    </span>
+                                    <h3>{{ $product->name }}</h3>
+                                    <p class="product-description">
+                                        {{ $product->short_description }}
+                                    </p>
+                                    <div class="product-card-bottom">
+                                        <strong>
+                                            {{ $product->currency }} {{ number_format($product->price, 2) }}
+                                        </strong>
+                                        <a href="{{ route('product.view', $product) }}" class="product-view-link">
+                                            View
+                                            <i class="bi bi-arrow-up-right"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="product-card-body">
-                                <span class="product-category">Men / Clothing</span>
-                                <h3>Readymade Garment 1</h3>
-                                <p class="product-description">Premium ready-to-wear garment crafted for everyday
-                                    elegance.</p>
-                                <div class="product-card-bottom">
-                                    <strong>$67.24</strong>
-                                    <a href="#" class="product-view-link">View <i
-                                            class="bi bi-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="product-item" data-name="Readymade Garment 2" data-category="women clothing"
-                        data-brand="chanel" data-price="43.48" data-size="xs s m"
-                        data-tags="product fashion clothing">
-                        <div class="product-card">
-                            <div class="product-image-wrap">
-                                <span class="product-badge">New</span>
-                                <img src="{{ asset('images/product_page/readymate garment 2.jpg') }}" alt="Readymade Garment 2"
-                                    class="product-image">
-                                <div class="product-card-overlay">
-                                    <button type="button" class="product-card-action product-wishlist"
-                                        aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                                    <button type="button" class="product-quick-view"><i
-                                            class="bi bi-eye"></i><span>Quick View</span></button>
-                                </div>
-                            </div>
-                            <div class="product-card-body">
-                                <span class="product-category">Women / Clothing</span>
-                                <h3>Readymade Garment 2</h3>
-                                <p class="product-description">A refined silhouette combining comfort with contemporary
-                                    style.</p>
-                                <div class="product-card-bottom">
-                                    <strong>$43.48</strong>
-                                    <a href="#" class="product-view-link">View <i
-                                            class="bi bi-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="product-item" data-name="Readymade Garment 3" data-category="bags"
-                        data-brand="louis-vuitton" data-price="60.90" data-size="m l xl"
-                        data-tags="product bags fashion accessories">
-                        <div class="product-card">
-                            <div class="product-image-wrap">
-                                <span class="product-badge">Popular</span>
-                                <img src="{{ asset('images/product_page/readymate garment 3.jpg') }}" alt="Readymade Garment 3"
-                                    class="product-image">
-                                <div class="product-card-overlay">
-                                    <button type="button" class="product-card-action product-wishlist"
-                                        aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                                    <button type="button" class="product-quick-view"><i
-                                            class="bi bi-eye"></i><span>Quick View</span></button>
-                                </div>
-                            </div>
-                            <div class="product-card-body">
-                                <span class="product-category">Bags / Fashion</span>
-                                <h3>Readymade Garment 3</h3>
-                                <p class="product-description">A versatile fashion piece selected for modern premium
-                                    collections.</p>
-                                <div class="product-card-bottom">
-                                    <strong>$60.90</strong>
-                                    <a href="#" class="product-view-link">View <i
-                                            class="bi bi-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="product-item" data-name="Readymade Garment 4" data-category="clothing men"
-                        data-brand="hermes" data-price="60.90" data-size="l xl 2xl"
-                        data-tags="product fashion clothing">
-                        <div class="product-card">
-                            <div class="product-image-wrap">
-                                <span class="product-badge">Limited</span>
-                                <img src="{{ asset('images/product_page/readymate garment 4.jpg') }}" alt="Readymade Garment 4"
-                                    class="product-image">
-                                <div class="product-card-overlay">
-                                    <button type="button" class="product-card-action product-wishlist"
-                                        aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
-                                    <button type="button" class="product-quick-view"><i
-                                            class="bi bi-eye"></i><span>Quick View</span></button>
-                                </div>
-                            </div>
-                            <div class="product-card-body">
-                                <span class="product-category">Clothing / Men</span>
-                                <h3>Readymade Garment 4</h3>
-                                <p class="product-description">A premium wardrobe essential with a polished
-                                    contemporary finish.</p>
-                                <div class="product-card-bottom">
-                                    <strong>$60.90</strong>
-                                    <a href="#" class="product-view-link">View <i
-                                            class="bi bi-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
+                        </article>
+                    @endforeach
                 </div>
-
                 <div class="product-empty" id="productEmpty">
                     <div class="product-empty-icon"><i class="bi bi-search"></i></div>
                     <h3>No products found</h3>

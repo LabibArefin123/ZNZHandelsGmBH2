@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class PageController extends Controller
 {   
@@ -14,10 +15,26 @@ class PageController extends Controller
     {
         return view('about'); // assuming you have an about.blade.php view
     }
-    
     public function product()
     {
-        return view('product'); // assuming you have an about.blade.php view
+        $products = Product::where('is_active', true)
+            ->latest()
+            ->get();
+        return view('product', compact('products'));
+    }
+    public function productView(Product $product)
+    {
+        abort_unless($product->is_active, 404);
+        $relatedProducts = Product::where('is_active', true)
+            ->where('id', '!=', $product->id)
+            ->where(function ($query) use ($product) {
+                $query->where('category', $product->category)
+                    ->orWhere('brand', $product->brand);
+            })
+            ->latest()
+            ->take(4)
+            ->get();
+        return view('product_view', compact('product', 'relatedProducts'));
     }
 
     public function men()
