@@ -1,0 +1,10 @@
+.partner-section {
+    position: relative;
+    padding: 110px 0;
+    background: #fff;
+    overflow: hidden;
+}
+.grid-container {
+    position: relative;
+    width: 100%;
+}

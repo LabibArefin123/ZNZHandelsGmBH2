@@ -1,0 +1,48 @@
+.partner-heading {
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.partner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.partner-eyebrow::before,
+.partner-eyebrow::after {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: #111;
+}
+
+.partner-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-title-row h2 {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #111;
+}
+
+.partner-heading p {
+    max-width: 600px;
+    margin: 24px auto 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #777;
+}

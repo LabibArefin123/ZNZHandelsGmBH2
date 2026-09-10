@@ -12,10 +12,10 @@
         @hasSection('title')
             @yield('title')
         @else
-            {{ config('app.name', 'SusthoCare') }}
+            {{ config('app.name', 'ZNZ Handels GMBH') }}
         @endif
     </title>
-
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/frontend.css') }}">
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <!-- AOS CSS -->
@@ -55,7 +55,7 @@
             errors: @json($errors->all())
         };
     </script>
-
+    <script src="{{ asset('js/custom_frontend/custom_back_top_button.js') }}"></script>
     {{-- End of SweetAlert2 notifications --}}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </body>

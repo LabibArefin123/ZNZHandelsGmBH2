@@ -8,7 +8,7 @@
             <div class="header-wrapper">
                 <div class="header-brand">
                     <a href="{{ route('home') }}" class="header-logo-link">
-                        <img src="{{ asset('img/bg.png') }}" alt="ZNZ Handels GmbH" class="header-logo">
+                        <img src="{{ asset('images/logo.PNG') }}" alt="ZNZ Handels GmbH" class="header-logo">
                     </a>
                 </div>
                 <nav class="header-navigation">

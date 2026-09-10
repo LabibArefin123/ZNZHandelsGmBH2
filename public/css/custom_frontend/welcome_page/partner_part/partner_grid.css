@@ -1,0 +1,8 @@
+.grid-class {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
