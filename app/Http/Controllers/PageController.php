@@ -20,7 +20,7 @@ class PageController extends Controller
         $products = Product::where('is_active', true)
             ->latest()
             ->get();
-        return view('product', compact('products'));
+        return view('frontend.product_page.product', compact('products'));
     }
     public function productView(Product $product)
     {
@@ -34,7 +34,7 @@ class PageController extends Controller
             ->latest()
             ->take(4)
             ->get();
-        return view('product_view', compact('product', 'relatedProducts'));
+        return view('frontend.product_page.view_product_page.product_view', compact('product', 'relatedProducts'));
     }
 
     public function men()

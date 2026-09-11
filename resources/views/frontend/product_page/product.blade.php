@@ -3,5 +3,5 @@
 @section('title', 'Our Products')
 
 @include('custom_layout.header')
-@include('product_content')
+@include('frontend.product_page.product_content')
 @include('custom_layout.footer')
