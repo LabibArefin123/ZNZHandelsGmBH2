@@ -1,0 +1,248 @@
+@media (max-width: 1199.98px) {
+    .about-hero {
+        min-height: 600px;
+    }
+    .about-hero h1 {
+        font-size: 60px;
+    }
+    .about-story-grid {
+        gap: 50px;
+    }
+    .about-story-image {
+        height: 570px;
+    }
+    .about-values-heading {
+        grid-template-columns: 1fr 360px;
+    }
+    .about-value-card {
+        padding: 27px 22px;
+    }
+}
+@media (max-width: 991.98px) {
+    .about-hero {
+        min-height: 560px;
+    }
+    .about-hero-content {
+        padding: 70px 0;
+    }
+    .about-hero h1 {
+        font-size: 50px;
+    }
+    .about-hero-scroll {
+        display: none;
+    }
+    .about-intro {
+        padding: 85px 0;
+    }
+    .about-intro-grid {
+        grid-template-columns: 100px 1fr;
+        gap: 35px;
+    }
+    .about-intro-content h2 {
+        font-size: 38px;
+    }
+    .about-story {
+        padding-bottom: 90px;
+    }
+    .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .about-story-image {
+        height: 580px;
+    }
+    .about-story-content {
+        max-width: none;
+    }
+    .about-values {
+        padding: 90px 0;
+    }
+    .about-values-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .about-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-global-trade {
+        padding: 90px 0;
+    }
+    .about-global-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-quality-inner {
+        grid-template-columns: 1fr 220px;
+        gap: 40px;
+    }
+    .about-cta-inner {
+        padding: 45px;
+    }
+}
+@media (max-width: 767.98px) {
+    .about-hero {
+        min-height: 520px;
+    }
+    .about-hero::before {
+        right: -260px;
+    }
+    .about-hero::after {
+        right: -160px;
+    }
+    .about-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+    .about-hero p {
+        font-size: 13px;
+    }
+    .about-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        width: max-content;
+    }
+    .about-primary-btn,
+    .about-secondary-btn {
+        width: 100%;
+    }
+    .about-intro {
+        padding: 70px 0;
+    }
+    .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .about-section-label p {
+        writing-mode: initial;
+        transform: none;
+    }
+    .about-section-label {
+        align-items: center;
+    }
+    .about-intro-content h2 {
+        font-size: 34px;
+    }
+    .about-story-image {
+        height: 480px;
+    }
+    .about-story-content h2 {
+        font-size: 34px;
+    }
+    .about-values {
+        padding: 70px 0;
+    }
+    .about-values-heading h2 {
+        font-size: 35px;
+    }
+    .about-values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-value-card {
+        min-height: 290px;
+        padding: 23px 20px;
+    }
+    .about-global-heading h2 {
+        font-size: 37px;
+    }
+    .about-global-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-quality {
+        padding: 75px 0;
+    }
+    .about-quality-inner {
+        grid-template-columns: 1fr;
+    }
+    .about-quality-stat {
+        min-height: 190px;
+    }
+    .about-cta {
+        padding: 70px 0;
+    }
+    .about-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 38px 28px;
+    }
+}
+@media (max-width: 575.98px) {
+    .about-hero {
+        min-height: 500px;
+    }
+    .about-hero-content {
+        padding: 55px 0;
+    }
+    .about-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+    .about-hero h1 {
+        font-size: 35px;
+    }
+    .about-hero p {
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+    .about-intro-content h2 {
+        font-size: 30px;
+    }
+    .about-intro-content p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+    .about-story-image {
+        height: 390px;
+    }
+    .about-story-image-caption {
+        left: 22px;
+        bottom: 22px;
+    }
+    .about-story-image-caption strong {
+        font-size: 20px;
+    }
+    .about-story-content h2 {
+        font-size: 29px;
+    }
+    .about-story-content > p {
+        font-size: 12px;
+    }
+    .about-values-heading h2 {
+        font-size: 30px;
+    }
+    .about-values-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-value-card {
+        min-height: auto;
+        padding: 25px;
+    }
+    .about-global-heading h2 {
+        font-size: 31px;
+    }
+    .about-global-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-global-country {
+        min-height: 190px;
+    }
+    .about-global-country > div {
+        margin-top: 30px;
+    }
+    .about-quality-content h2 {
+        font-size: 31px;
+    }
+    .about-quality-content p {
+        font-size: 12px;
+    }
+    .about-cta-inner h2 {
+        font-size: 28px;
+    }
+    .about-cta-inner p {
+        font-size: 11px;
+    }
+    .about-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+    
