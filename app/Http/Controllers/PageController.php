@@ -9,12 +9,12 @@ class PageController extends Controller
 {   
     public function home()
     {
-        return view('welcome'); // assuming you have a home.blade.php view
+        return view('frontend.welcome_page.welcome'); // assuming you have a home.blade.php view
     }
 
     public function about()
     {
-        return view('about'); // assuming you have an about.blade.php view
+        return view('frontend.about_page.about'); // assuming you have an about.blade.php view
     }
     public function product()
     {

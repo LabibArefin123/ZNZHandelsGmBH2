@@ -1,0 +1,5 @@
+@extends('frontend.shared_layout.app')
+@section('title', 'About Us')
+@include('custom_layout.header')
+@include('frontend.about_page.about_content')
+@include('custom_layout.footer')
