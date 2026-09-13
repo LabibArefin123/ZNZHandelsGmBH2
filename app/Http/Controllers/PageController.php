@@ -43,16 +43,40 @@ class PageController extends Controller
     public function productView(Product $product)
     {
         abort_unless($product->is_active, 404);
-        $relatedProducts = Product::where('is_active', true)
+
+        $product->load([
+            'category',
+            'brand',
+            'sizes',
+        ]);
+
+        $relatedProducts = Product::with([
+            'category',
+            'brand',
+        ])
+            ->where('is_active', true)
             ->where('id', '!=', $product->id)
             ->where(function ($query) use ($product) {
-                $query->where('category', $product->category)
-                    ->orWhere('brand', $product->brand);
+                $query->where(
+                    'product_category_id',
+                    $product->product_category_id
+                )
+                    ->orWhere(
+                        'product_brand_id',
+                        $product->product_brand_id
+                    );
             })
             ->latest()
             ->take(4)
             ->get();
-        return view('frontend.product_page.view_product_page.product_view', compact('product', 'relatedProducts'));
+
+        return view(
+            'frontend.product_page.view_product_page.product_view',
+            compact(
+                'product',
+                'relatedProducts'
+            )
+        );
     }
 
     public function blog()
