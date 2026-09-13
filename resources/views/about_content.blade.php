@@ -69,7 +69,8 @@
         <div class="container">
             <div class="about-story-grid">
                 <div class="about-story-image">
-                    <img src="{{ asset('images/about/about-textile.jpg') }}" alt="ZNZ Handels GmbH textile sourcing">
+                    <img src="{{ asset('images/about_page/about.png') }}"
+                        alt="ZNZ Handels GmbH global textile sourcing">
                     <div class="about-story-image-caption">
                         <span>GLOBAL SOURCING</span>
                         <strong>Quality beyond borders.</strong>

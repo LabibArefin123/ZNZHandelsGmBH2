@@ -1,0 +1,22 @@
+.header-nav-list .nav-link.active {
+    color: #111 !important;
+    background: linear-gradient(to bottom, transparent, #faf9f6);
+}
+
+.header-nav-list .nav-link.active::before {
+    transform: scaleX(1);
+}
+
+.header-nav-list .nav-link.active::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.header-nav-list .nav-link.active:hover::before {
+    transform: scaleX(1);
+}
+
+.header-nav-list .nav-link.active:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}

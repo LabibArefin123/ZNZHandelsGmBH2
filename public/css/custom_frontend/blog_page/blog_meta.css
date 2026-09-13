@@ -1,0 +1,17 @@
+.blog-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #999;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.blog-meta-divider {
+    width: 18px;
+    height: 1px;
+    background: #d8c39e;
+}

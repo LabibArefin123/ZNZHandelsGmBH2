@@ -1,0 +1,112 @@
+.contact-form-wrapper {
+    position: relative;
+    padding: 45px;
+    background: #faf9f6;
+    border: 1px solid #e7e2d9;
+}
+
+.contact-form-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    background: #b08a45;
+}
+
+.contact-form-header {
+    margin-bottom: 30px;
+}
+
+.contact-form-header span {
+    display: block;
+    margin-bottom: 9px;
+    color: #b08a45;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-form-header h2 {
+    margin: 0;
+    color: #292929;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.contact-form-header p {
+    margin: 10px 0 0;
+    color: #888;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.contact-form .form-group {
+    margin-bottom: 18px;
+}
+
+.contact-form .form-control {
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #ddd8cf;
+    border-radius: 0;
+    color: #333;
+    background: #fff;
+    box-shadow: none;
+    font-size: 11px;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-form textarea.form-control {
+    min-height: 145px;
+    padding-top: 15px;
+    resize: vertical;
+}
+
+.contact-form .form-control::placeholder {
+    color: #aaa;
+}
+
+.contact-form .form-control:focus {
+    border-color: #b08a45;
+    box-shadow: 0 0 0 3px rgba(176, 138, 69, 0.08);
+}
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 3px;
+    border: 1px solid #222;
+    border-radius: 0;
+    color: #fff;
+    background: #222;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-submit:hover {
+    border-color: #b08a45;
+    color: #fff;
+    background: #b08a45;
+    transform: translateY(-2px);
+}
+
+.contact-submit i {
+    font-size: 13px;
+}

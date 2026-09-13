@@ -1,0 +1,73 @@
+.contact-highlight {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.contact-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    background: #faf9f6;
+    border: 1px solid #ebe7df;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-highlight-item:hover {
+    transform: translateY(-3px);
+    border-color: #d8c39e;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.contact-highlight-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d9c6a3;
+    border-radius: 50%;
+    color: #b08a45;
+    background: #fff;
+}
+
+.contact-highlight-icon i {
+    font-size: 15px;
+}
+
+.contact-highlight-content {
+    min-width: 0;
+}
+
+.contact-highlight-content small {
+    display: block;
+    margin-bottom: 3px;
+    color: #999;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.contact-highlight-content a,
+.contact-highlight-content strong {
+    display: block;
+    overflow: hidden;
+    color: #333;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contact-highlight-content a:hover {
+    color: #b08a45;
+}

@@ -1,130 +1,85 @@
 @extends('frontend.shared_layout.app')
 
-<div class="container mt-5">
-        <h2 class="text-center mb-5">Latest Blogs</h2>
+@section('content')
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/blog_page/blog_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/blog_page/blog_grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/blog_page/blog_card.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/blog_page/blog_meta.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/blog_page/blog_read_more.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom_frontend/blog_page/blog_resp.css') }}">
 
-        <div class="row">
-            <!-- First news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-1.jpg') }}" class="card-img-top" alt="News Image 1">
-                    <div class="card-body">
-                        <p class="card-text text-muted">16 February 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+    <section class="blog-header">
+        <div class="container">
+            <div class="blog-header-content">
+                <span class="blog-header-eyebrow">ZNZ Journal</span>
 
-            <!-- Second news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-2.jpg') }}" class="card-img-top" alt="News Image 2">
-                    <div class="card-body">
-                        <p class="card-text text-muted">21 February 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+                <h1>
+                    Insights from the world of
+                    <em>textiles &amp; fashion.</em>
+                </h1>
 
-            <!-- Third news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-3.jpg') }}" class="card-img-top" alt="News Image 3">
-                    <div class="card-body">
-                        <p class="card-text text-muted">28 February 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
+                <p>
+                    Explore ideas, industry insights, sourcing stories and
+                    perspectives from the international textile and fashion
+                    business.
+                </p>
             </div>
         </div>
+    </section>
 
-    </div>
-<div class="container mt-5">
-       
-
-        <div class="row">
-            <!-- First news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-4.jpg') }}" class="card-img-top" alt="News Image 1">
-                    <div class="card-body">
-                        <p class="card-text text-muted">16 January 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-section-heading">
+                <div>
+                    <span class="blog-section-label">Latest Stories</span>
+                    <h2>From our <em>journal.</em></h2>
                 </div>
+
+                <p>
+                    Discover the people, processes and ideas shaping
+                    modern textile sourcing.
+                </p>
             </div>
 
-            <!-- Second news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-5.jpg') }}" class="card-img-top" alt="News Image 2">
-                    <div class="card-body">
-                        <p class="card-text text-muted">1 February 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+            <div class="blog-grid">
+                @foreach ($blogs as $blog)
+                    <article class="blog-card">
+                        <a href="#" class="blog-card-image">
+                            <img
+                                src="{{ asset($blog->image) }}"
+                                alt="{{ $blog->title }}"
+                            >
 
-            <!-- Third news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-6.jpg') }}" class="card-img-top" alt="News Image 3">
-                    <div class="card-body">
-                        <p class="card-text text-muted">28 July 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <span class="blog-card-category">
+                                {{ $blog->category }}
+                            </span>
+                        </a>
 
-    </div>
-<div class="container mt-5">
-        
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span>{{ $blog->published_at->format('d F Y') }}</span>
+                                <span class="blog-meta-divider"></span>
+                                <span>ZNZ Handels GmbH</span>
+                            </div>
 
-        <div class="row">
-            <!-- First news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-7.jpg') }}" class="card-img-top" alt="News Image 1">
-                    <div class="card-body">
-                        <p class="card-text text-muted">16 February 2020</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+                            <h3>
+                                <a href="#">
+                                    {{ $blog->title }}
+                                </a>
+                            </h3>
 
-            <!-- Second news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-8.jpg') }}" class="card-img-top" alt="News Image 2">
-                    <div class="card-body">
-                        <p class="card-text text-muted">13 January 2022</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+                            <p>
+                                {{ $blog->excerpt }}
+                            </p>
 
-            <!-- Third news item -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{{ asset('blog-9.jpg') }}" class="card-img-top" alt="News Image 3">
-                    <div class="card-body">
-                        <p class="card-text text-muted">28 May 2022</p>
-                        <h5 class="card-title">Demo</h5>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
+                            <a href="#" class="blog-read-more">
+                                Read Article
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </div>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+@endsection

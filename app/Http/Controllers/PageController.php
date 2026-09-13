@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Blog;
 
 class PageController extends Controller
 {   
@@ -37,23 +38,17 @@ class PageController extends Controller
         return view('frontend.product_page.view_product_page.product_view', compact('product', 'relatedProducts'));
     }
 
-    public function men()
-    {
-        return view('men'); // assuming you have a men.blade.php view
-    }
-
-    public function women()
-    {
-        return view('women'); // assuming you have a women.blade.php view
-    }
-
     public function blog()
     {
-        return view('blog'); // assuming you have a blog.blade.php view
+        $blogs = Blog::where('status', 'published')
+            ->latest('published_at')
+            ->get();
+
+        return view('blog', compact('blogs')); // assuming you have a blog.blade.php view
     }
 
     public function contact()
     {
-        return view('contact'); // assuming you have a contact.blade.php view
+        return view('frontend.contact_page.contact'); // assuming you have a contact.blade.php view
     }
 }
