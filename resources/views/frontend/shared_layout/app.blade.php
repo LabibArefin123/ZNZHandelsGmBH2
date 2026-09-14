@@ -32,7 +32,7 @@
     <div id="app">
         <!-- Scroll Progress Bar -->
         <div id="scrollProgress"
-            style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background-color: #ff6b6b; z-index: 9999; transition: width 0.25s ease;">
+            style="position: fixed; top: 0; left: 0; width: 0%; height: 4px; background-color: #a29b92; z-index: 9999; transition: width 0.25s ease;">
         </div>
 
         <main class="">
@@ -47,15 +47,9 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to Top">
         <i class="bi bi-arrow-up"></i>
     </button>
-    {{-- Start of SweetAlert2 notifications --}}
-
-    <script>
-        window.appData = {
-            success: @json(session('success')),
-            errors: @json($errors->all())
-        };
-    </script>
+    
     <script src="{{ asset('js/custom_frontend/custom_back_top_button.js') }}"></script>
+    <script src="{{ asset('js/custom_frontend/scroll_progress.js') }}"></script>
     {{-- End of SweetAlert2 notifications --}}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </body>

@@ -10,7 +10,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             // BlogSeeder::class,
-            WelcomeCategorySeeder::class,
+            // WelcomeCategorySeeder::class,
+            // AboutStorySeeder::class,
+            // AboutValueSeeder::class,
+            // AboutValueItemSeeder::class,
+            AboutGlobalTradeSeeder::class,
+            AboutGlobalCountrySeeder::class,
+            AboutQualitySeeder::class,
             // ProductCategorySeeder::class,
             // ProductBrandSeeder::class,
             // ProductSizeSeeder::class,

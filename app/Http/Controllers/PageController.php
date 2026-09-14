@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\AboutStory;
+use App\Models\AboutValue;
+use App\Models\AboutGlobalTrade;
+use App\Models\AboutQuality;
 use App\Models\Product;
 use App\Models\ProductBrand;
 use App\Models\ProductCategory;
@@ -23,7 +27,17 @@ class PageController extends Controller
     
     public function about()
     {
-        return view('frontend.about_page.about'); // assuming you have an about.blade.php view
+        $aboutStory = AboutStory::first();
+        $aboutValue = AboutValue::with('items')->first();
+        $aboutGlobalTrade = AboutGlobalTrade::with('countries')->first();
+        $aboutQuality = AboutQuality::first();
+
+        return view('frontend.about_page.about', compact(
+            'aboutStory',
+            'aboutValue',
+            'aboutGlobalTrade',
+            'aboutQuality'
+        ));
     }
 
     public function product()
@@ -90,7 +104,7 @@ class PageController extends Controller
             ->latest('published_at')
             ->get();
 
-        return view('blog', compact('blogs')); // assuming you have a blog.blade.php view
+        return view('frontend.blog_page.blog', compact('blogs')); // assuming you have a blog.blade.php view
     }
 
     public function contact()
