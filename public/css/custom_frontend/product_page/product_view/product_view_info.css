@@ -226,9 +226,7 @@
     border-color: #b08a45;
     color: #b08a45;
 }
-.product-view-wishlist.active i::before {
-    content: "\\f415";
-}
+
 .product-view-benefits {
     display: grid;
     grid-template-columns: 1fr;
