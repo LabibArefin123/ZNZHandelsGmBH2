@@ -11,109 +11,72 @@
             <h2>Categories</h2>
             <p>Discover thoughtfully selected collections designed for every style, season and occasion.</p>
         </div>
+
         <div class="category-showcase">
             <div class="category-preview-column">
+                @php($featuredCategory = $categories->first())
+
                 <div class="category-preview-frame">
                     <div class="category-preview-image-wrap">
-                        <img id="categoryPreviewImage" src="{{ asset('images/readymate garments.jpg') }}" alt="Garments"
-                            class="category-preview-image">
+                        <img id="categoryPreviewImage" src="{{ asset($featuredCategory->image) }}"
+                            alt="{{ $featuredCategory->name }}" class="category-preview-image">
                     </div>
+
                     <div class="category-preview-overlay"></div>
+
                     <div class="category-preview-content">
                         <span id="categoryPreviewNumber">01</span>
+
                         <div>
-                            <span class="category-preview-label">Featured Collection</span>
-                            <h3 id="categoryPreviewTitle">Garments</h3>
+                            <span class="category-preview-label" id="categoryPreviewLabel">
+                                {{ $featuredCategory->label }}
+                            </span>
+
+                            <h3 id="categoryPreviewTitle">
+                                {{ $featuredCategory->name }}
+                            </h3>
                         </div>
                     </div>
+
                     <div class="category-preview-progress">
                         <span id="categoryPreviewProgress"></span>
                     </div>
+
                     <button type="button" class="category-preview-view" data-bs-toggle="modal"
-                        data-bs-target="#imageModal" data-bs-image="{{ asset('images/readymate garments.jpg') }}">
+                        data-bs-target="#imageModal"
+                        data-bs-image="{{ asset($featuredCategory->featured_image ?? $featuredCategory->image) }}"
+                        data-bs-title="{{ $featuredCategory->name }}">
                         <i class="bi bi-arrows-fullscreen"></i>
                         <span>View Collection</span>
                     </button>
                 </div>
             </div>
+
             <div class="category-list-column">
                 <div class="category-list-header">
                     <span>Our Collections</span>
-                    <span id="categoryCount">12 Categories</span>
+                    <span id="categoryCount">{{ $categories->count() }} Categories</span>
                 </div>
+
                 <div class="category-list" id="categoryList">
-                    <button type="button" class="category-item active"
-                        data-image="{{ asset('images/readymate garments.jpg') }}" data-title="Garments">
-                        <span class="category-item-number">01</span>
-                        <span class="category-item-name">Garments</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/readymate footwear.jpg') }}" data-title="Footwear">
-                        <span class="category-item-number">02</span>
-                        <span class="category-item-name">Footwear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item" data-image="{{ asset('images/readymate sports.jpg') }}"
-                        data-title="Sports Wear">
-                        <span class="category-item-number">03</span>
-                        <span class="category-item-name">Sports Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/readymate leather.jpg') }}" data-title="Leather Accessories">
-                        <span class="category-item-number">04</span>
-                        <span class="category-item-name">Leather Accessories</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/readymate casual.PNG') }}" data-title="Casual Wear">
-                        <span class="category-item-number">05</span>
-                        <span class="category-item-name">Casual Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/readymate innerwear.jpg') }}" data-title="Inner Wear">
-                        <span class="category-item-number">06</span>
-                        <span class="category-item-name">Inner Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item" data-image="{{ asset('images/winter wear.PNG') }}"
-                        data-title="Winter Wear">
-                        <span class="category-item-number">07</span>
-                        <span class="category-item-name">Winter Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/readymate summer.PNG') }}" data-title="Summer Wear">
-                        <span class="category-item-number">08</span>
-                        <span class="category-item-name">Summer Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item" data-image="{{ asset('images/ethnic wear.PNG') }}"
-                        data-title="Ethnic Wear">
-                        <span class="category-item-number">09</span>
-                        <span class="category-item-name">Ethnic Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/readymate kids.PNG') }}" data-title="Kids Wear">
-                        <span class="category-item-number">10</span>
-                        <span class="category-item-name">Kids Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item"
-                        data-image="{{ asset('images/pregnancy wear.PNG') }}" data-title="Pregnancy Wear">
-                        <span class="category-item-number">11</span>
-                        <span class="category-item-name">Pregnancy Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                    <button type="button" class="category-item" data-image="{{ asset('images/formal wear.PNG') }}"
-                        data-title="Formal Wear">
-                        <span class="category-item-number">12</span>
-                        <span class="category-item-name">Formal Wear</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
+                    @foreach ($categories as $category)
+                        <button type="button" class="category-item {{ $loop->first ? 'active' : '' }}"
+                            data-image="{{ asset($category->image) }}" data-title="{{ $category->name }}"
+                            data-label="{{ $category->label }}"
+                            data-modal-image="{{ asset($category->featured_image ?? $category->image) }}"
+                            data-number="{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}">
+
+                            <span class="category-item-number">
+                                {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
+                            </span>
+
+                            <span class="category-item-name">
+                                {{ $category->name }}
+                            </span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </button>
+                    @endforeach
                 </div>
             </div>
         </div>

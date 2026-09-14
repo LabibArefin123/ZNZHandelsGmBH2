@@ -8,14 +8,18 @@ use App\Models\ProductBrand;
 use App\Models\ProductCategory;
 use App\Models\ProductSize;
 use App\Models\Blog;
+use App\Models\WelcomeCategory;
 
 class PageController extends Controller
 {
     public function home()
     {
-        return view('frontend.welcome_page.welcome'); // assuming you have a home.blade.php view
-    }
+        $categories = WelcomeCategory::where('status', true)
+            ->orderBy('sort_order')
+            ->get();
 
+        return view('frontend.welcome_page.welcome', compact('categories'));
+    }
     public function about()
     {
         return view('frontend.about_page.about'); // assuming you have an about.blade.php view
