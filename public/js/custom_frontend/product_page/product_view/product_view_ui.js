@@ -40,14 +40,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function syncWishlistButton() {
             const saved = window.ZNZWishlist.has(product.id);
+
             wishlist.classList.toggle("active", saved);
 
             const icon = wishlist.querySelector("i");
 
             if (icon) {
-                icon.classList.toggle("bi-heart-fill", saved);
-                icon.classList.toggle("bi-heart", !saved);
+                icon.classList.remove(
+                    "bi-heart",
+                    "bi-heart-fill",
+                    "bi-check",
+                    "bi-check-lg",
+                );
+
+                icon.classList.add(saved ? "bi-check-lg" : "bi-heart");
             }
+
+            wishlist.setAttribute(
+                "aria-label",
+                saved ? "Remove from wishlist" : "Add to wishlist",
+            );
         }
 
         wishlist.addEventListener("click", function () {

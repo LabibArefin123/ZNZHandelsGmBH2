@@ -1,0 +1,39 @@
+.header-wishlist-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.header-wishlist-summary > div span {
+    display: block;
+    margin-bottom: 4px;
+    color: #999188;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.header-wishlist-summary > div strong {
+    color: #292929;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.header-wishlist-clear {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border: 0;
+    background: transparent;
+    color: #8e867d;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.header-wishlist-clear:hover {
+    color: #b08a45;
+}

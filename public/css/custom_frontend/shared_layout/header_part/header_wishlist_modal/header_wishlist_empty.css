@@ -1,0 +1,70 @@
+.header-wishlist-empty {
+    display: none;
+    padding: 50px 20px 40px;
+    text-align: center;
+}
+
+.header-wishlist-empty.show {
+    display: block;
+}
+
+.header-wishlist-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 18px;
+    border: 1px solid #e5dfd7;
+    border-radius: 50%;
+    color: #b08a45;
+    font-size: 20px;
+}
+
+.header-wishlist-empty > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #a29a91;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.header-wishlist-empty h3 {
+    margin: 0 0 8px;
+    color: #292929;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.header-wishlist-empty p {
+    max-width: 390px;
+    margin: 0 auto 20px;
+    color: #918a82;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.header-wishlist-browse {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 17px;
+    background: #292929;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.header-wishlist-browse:hover {
+    background: #b08a45;
+    color: #fff;
+    transform: translateY(-2px);
+}

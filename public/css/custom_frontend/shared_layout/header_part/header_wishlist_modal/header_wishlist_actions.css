@@ -1,0 +1,39 @@
+.header-wishlist-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.header-wishlist-view,
+.header-wishlist-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #e5dfd8;
+    border-radius: 50%;
+    background: #fff;
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.header-wishlist-view:hover {
+    color: #fff;
+    background: #b08a45;
+    border-color: #b08a45;
+    transform: translateY(-2px);
+}
+
+.header-wishlist-remove:hover {
+    color: #fff;
+    background: #292929;
+    border-color: #292929;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,23 @@
+.header-wishlist-modal .modal-dialog {
+    max-width: 760px;
+}
+
+.header-wishlist-modal .modal-content {
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+}
+
+.header-wishlist-modal .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px 34px 22px;
+    border-bottom: 1px solid #eeeae4;
+}
+
+.header-wishlist-modal .modal-body {
+    padding: 24px 34px 30px;
+}

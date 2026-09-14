@@ -3,11 +3,24 @@
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation_list.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation_link.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation_active.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation_toggler.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation_active.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_navigation_toggler.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_actions.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_search_modal.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal/header_wishlist_modal_base.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal/header_wishlist_summary.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal/header_wishlist_product.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal/header_wishlist_actions.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal/header_wishlist_empty.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('css/custom_frontend/shared_layout/header_part/header_wishlist_modal/header_wishlist_state.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/shared_layout/header_part/header_resp.css') }}">
     @include('custom_layout.header_search_modal')
     @include('custom_layout.header_wishlist_modal')
@@ -89,4 +102,13 @@
 </nav>
 <script src="{{ asset('js/custom_frontend/shared_layout/header_part/nav_link.js') }}"></script>
 <script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_search.js') }}"></script>
-<script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_wishlist.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_wishlist/header_wishlist_storage.js') }}">
+</script>
+<script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_wishlist/header_wishlist_render.js') }}">
+</script>
+<script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_wishlist/header_wishlist_actions.js') }}">
+</script>
+<script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_wishlist/header_wishlist_sync.js') }}">
+</script>
+<script src="{{ asset('js/custom_frontend/shared_layout/header_part/header_wishlist/header_wishlist_init.js') }}">
+</script>
