@@ -12,6 +12,7 @@ use App\Models\ProductBrand;
 use App\Models\ProductCategory;
 use App\Models\ProductSize;
 use App\Models\Blog;
+use App\Models\News;
 use App\Models\WelcomeCategory;
 
 class PageController extends Controller
@@ -22,9 +23,14 @@ class PageController extends Controller
             ->orderBy('sort_order')
             ->get();
 
-        return view('frontend.welcome_page.welcome', compact('categories'));
+        $news = News::where('is_active', true)
+            ->latest('published_at')
+            ->take(3)
+            ->get();
+
+        return view('frontend.welcome_page.welcome', compact('categories', 'news'));
     }
-    
+
     public function about()
     {
         $aboutStory = AboutStory::first();
