@@ -155,7 +155,6 @@
             <div class="product-filter-overlay" id="productFilterOverlay"></div>
 
             <main class="product-results">
-
                 <div class="product-results-head">
                     <div>
                         <span class="product-results-eyebrow">CURATED FOR YOU</span>

@@ -181,275 +181,118 @@
                             data-product-currency="{{ $product->currency }}"
                             data-product-category="{{ $product->category?->name ?? 'Product' }}"
                             data-product-url="{{ route('product.view', $product) }}" aria-label="Add to wishlist">
-
                             <i class="bi bi-heart"></i>
                         </button>
                     </div>
 
                     <div class="product-view-benefits">
-
                         <div>
-
                             <i class="bi bi-patch-check"></i>
-
                             <span>
                                 <strong>Quality Checked</strong>
                                 Carefully selected products
                             </span>
-
                         </div>
 
-
                         <div>
-
                             <i class="bi bi-box-seam"></i>
-
                             <span>
                                 <strong>Reliable Delivery</strong>
                                 Secure product handling
                             </span>
-
                         </div>
 
-
                         <div>
-
                             <i class="bi bi-headset"></i>
-
                             <span>
                                 <strong>Customer First</strong>
                                 Dedicated support
                             </span>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-            {{-- Product Details --}}
             <div class="product-view-details">
-
-
-                {{-- Tabs --}}
                 <div class="product-view-tabs">
-
-                    <button type="button" class="active" data-tab="description">
-
-                        Description
-
-                    </button>
-
-
-                    <button type="button" data-tab="details">
-
-                        Product Details
-
-                    </button>
-
-
-                    <button type="button" data-tab="shipping">
-
-                        Shipping
-
-                    </button>
-
-
-                    <button type="button" data-tab="reviews">
-
-                        Reviews
-
-                    </button>
-
+                    <button type="button" class="active" data-tab="description">Description</button>
+                    <button type="button" data-tab="details">Product Details</button>
+                    <button type="button" data-tab="shipping">Shipping</button>
+                    <button type="button" data-tab="reviews">Reviews</button>
                 </div>
 
-
-                {{-- Description --}}
                 <div class="product-view-tab-content active" id="tab-description">
-
                     <div class="product-view-content-heading">
-
-                        <span>
-                            01
-                        </span>
-
+                        <span>01 </span>
                         <div>
-
-                            <span>
-                                ABOUT THE PRODUCT
-                            </span>
-
-                            <h2>
-                                Designed with purpose.
-                            </h2>
-
+                            <span>ABOUT THE PRODUCT </span>
+                            <h2> Designed with purpose.</h2>
                         </div>
-
                     </div>
 
-
-                    <p>
-                        {{ $product->description }}
-                    </p>
-
+                    <p>{{ $product->description }} </p>
                 </div>
 
-
-                {{-- Details --}}
                 <div class="product-view-tab-content" id="tab-details">
-
                     <div class="product-view-specifications">
-
-
                         <div>
-
-                            <span>
-                                Category
-                            </span>
-
-                            <strong>
-                                {{ $product->category?->name ?? 'N/A' }}
-                            </strong>
-
+                            <span>Category</span>
+                            <strong>{{ $product->category?->name ?? 'N/A' }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                Brand
-                            </span>
-
-                            <strong>
-                                {{ $product->brand?->name ?? 'N/A' }}
-                            </strong>
-
+                            <span>Brand</span>
+                            <strong>{{ $product->brand?->name ?? 'N/A' }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                SKU
-                            </span>
-
-                            <strong>
-                                {{ $product->sku }}
-                            </strong>
-
+                            <span>SKU</span>
+                            <strong>{{ $product->sku }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                Material
-                            </span>
-
-                            <strong>
-                                {{ $product->material ?? 'Premium Material' }}
-                            </strong>
-
+                            <span>Material</span>
+                            <strong>{{ $product->material ?? 'Premium Material' }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                Origin
-                            </span>
-
-                            <strong>
-                                {{ $product->origin ?? 'European Collection' }}
-                            </strong>
-
+                            <span>Origin</span>
+                            <strong>{{ $product->origin ?? 'European Collection' }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                Fit
-                            </span>
-
-                            <strong>
-                                {{ $product->fit ?? 'Regular Fit' }}
-                            </strong>
-
+                            <span>Fit</span>
+                            <strong>{{ $product->fit ?? 'Regular Fit' }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                Availability
-                            </span>
-
-                            <strong>
-                                {{ $product->availability }}
-                            </strong>
-
+                            <span>Availability</span>
+                            <strong>{{ $product->availability }}</strong>
                         </div>
 
-
                         <div>
-
-                            <span>
-                                Stock
-                            </span>
-
-                            <strong>
-                                {{ $product->stock }}
-                            </strong>
-
+                            <span>Stock</span>
+                            <strong>{{ $product->stock }}</strong>
                         </div>
-
                     </div>
-
                 </div>
 
-
-                {{-- Shipping --}}
                 <div class="product-view-tab-content" id="tab-shipping">
-
                     <div class="product-view-shipping">
-
-
                         <div>
-
                             <i class="bi bi-box-seam"></i>
-
-                            <h3>
-                                Carefully Packed
-                            </h3>
-
-                            <p>
-                                Every product is prepared and packed with attention to quality and presentation.
-                            </p>
-
+                            <h3>Carefully Packed</h3>
+                            <p>Every product is prepared and packed with attention to quality and presentation.</p>
                         </div>
 
-
                         <div>
-
                             <i class="bi bi-truck"></i>
-
-                            <h3>
-                                Reliable Delivery
-                            </h3>
-
-                            <p>
-                                We work with reliable logistics partners to provide dependable delivery.
-                            </p>
-
+                            <h3>Reliable Delivery</h3>
+                            <p>We work with reliable logistics partners to provide dependable delivery.</p>
                         </div>
 
 
                         <div>
-
                             <i class="bi bi-shield-check"></i>
 
                             <h3>
@@ -522,135 +365,64 @@
 
             </div>
 
-
-            {{-- Related Products --}}
             @if ($relatedProducts->count())
                 <div class="product-view-related">
-
-
                     <div class="product-view-related-heading">
-
                         <div>
-
-                            <span>
-                                YOU MAY ALSO LIKE
-                            </span>
-
-                            <h2>
-                                Explore More
-                            </h2>
-
+                            <span>YOU MAY ALSO LIKE</span>
+                            <h2>Explore More</h2>
                         </div>
 
-
                         <a href="{{ route('product') }}">
-
                             View Collection
-
                             <i class="bi bi-arrow-up-right"></i>
-
                         </a>
-
                     </div>
-
 
                     <div class="product-view-related-grid">
-
                         @foreach ($relatedProducts as $related)
                             <article class="product-related-card">
-
-
                                 <a href="{{ route('product.view', $related) }}" class="product-related-image">
-
-
                                     @if ($related->badge)
-                                        <span>
-                                            {{ $related->badge }}
-                                        </span>
+                                        <span>{{ $related->badge }}</span>
                                     @endif
-
-
                                     <img src="{{ asset($related->image) }}" alt="{{ $related->name }}">
-
-
                                 </a>
 
-
                                 <div class="product-related-body">
-
-
-                                    <small>
-                                        {{ $related->category?->name ?? 'Product' }}
-                                    </small>
-
-
+                                    <small>{{ $related->category?->name ?? 'Product' }} </small>
                                     <h3>
-
-                                        <a href="{{ route('product.view', $related) }}">
-
-                                            {{ $related->name }}
-
-                                        </a>
-
+                                        <a href="{{ route('product.view', $related) }}">{{ $related->name }}</a>
                                     </h3>
 
-
                                     <div>
-
                                         <strong>
-
                                             {{ $related->currency }}
                                             {{ number_format($related->price, 2) }}
-
                                         </strong>
 
-
                                         <a href="{{ route('product.view', $related) }}">
-
                                             <i class="bi bi-arrow-up-right"></i>
-
                                         </a>
-
                                     </div>
-
-
                                 </div>
-
                             </article>
                         @endforeach
-
                     </div>
-
                 </div>
             @endif
-
         </div>
-
     </section>
 
-
-    {{-- Image Modal --}}
     <div class="product-image-modal" id="productImageModal">
-
         <button type="button" id="productImageModalClose" aria-label="Close image">
-
             <i class="bi bi-x-lg"></i>
-
         </button>
-
-
         <img id="productImageModalImage" src="" alt="{{ $product->name }}">
-
     </div>
 
-
     <script src="{{ asset('js/custom_frontend/product_page/product_view/product_view_gallery.js') }}"></script>
-
     <script src="{{ asset('js/custom_frontend/product_page/product_view/product_view_quantity.js') }}"></script>
-
     <script src="{{ asset('js/custom_frontend/product_page/product_view/product_view_ui.js') }}"></script>
-
-
     @include('custom_layout.footer')
-
 @endsection
