@@ -20,6 +20,7 @@ class PageController extends Controller
 
         return view('frontend.welcome_page.welcome', compact('categories'));
     }
+    
     public function about()
     {
         return view('frontend.about_page.about'); // assuming you have an about.blade.php view

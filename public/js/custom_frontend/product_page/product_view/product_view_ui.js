@@ -27,15 +27,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 selectedSize.textContent = this.dataset.size || "";
         });
     });
-    if (wishlist) {
-        wishlist.addEventListener("click", function () {
-            this.classList.toggle("active");
-            const icon = this.querySelector("i");
+    if (wishlist && window.ZNZWishlist) {
+        const product = {
+            id: wishlist.dataset.productId,
+            name: wishlist.dataset.productName,
+            image: wishlist.dataset.productImage,
+            price: wishlist.dataset.productPrice,
+            currency: wishlist.dataset.productCurrency,
+            category: wishlist.dataset.productCategory,
+            url: wishlist.dataset.productUrl,
+        };
+
+        function syncWishlistButton() {
+            const saved = window.ZNZWishlist.has(product.id);
+            wishlist.classList.toggle("active", saved);
+
+            const icon = wishlist.querySelector("i");
+
             if (icon) {
-                icon.classList.toggle("bi-heart");
-                icon.classList.toggle("bi-heart-fill");
+                icon.classList.toggle("bi-heart-fill", saved);
+                icon.classList.toggle("bi-heart", !saved);
             }
+        }
+
+        wishlist.addEventListener("click", function () {
+            if (window.ZNZWishlist.has(product.id)) {
+                window.ZNZWishlist.remove(product.id);
+            } else {
+                window.ZNZWishlist.add(product);
+            }
+
+            syncWishlistButton();
         });
+
+        syncWishlistButton();
     }
     tabs.forEach(function (tab) {
         tab.addEventListener("click", function () {

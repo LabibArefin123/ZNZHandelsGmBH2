@@ -177,11 +177,23 @@
                                     @endif <img src="{{ asset($product->image) }}"
                                         alt="{{ $product->name }}" class="product-image">
                                     <div class="product-card-overlay"> <button type="button"
-                                            class="product-card-action product-wishlist" aria-label="Add to wishlist">
-                                            <i class="bi bi-heart"></i> </button> <a
-                                            href="{{ route('product.view', $product) }}" class="product-quick-view">
-                                            <i class="bi bi-eye"></i> <span> View
-                                                Product </span> </a> </div>
+                                            class="product-card-action product-wishlist"
+                                            data-product-id="{{ $product->id }}"
+                                            data-product-name="{{ $product->name }}"
+                                            data-product-image="{{ asset($product->image) }}"
+                                            data-product-price="{{ number_format($product->price, 2) }}"
+                                            data-product-currency="{{ $product->currency }}"
+                                            data-product-category="{{ $product->category?->name ?? 'Product' }}"
+                                            data-product-url="{{ route('product.view', $product) }}"
+                                            aria-label="Add to wishlist">
+
+                                            <i class="bi bi-heart"></i>
+                                        </button>
+                                        <a href="{{ route('product.view', $product) }}" class="product-quick-view">
+                                            <i class="bi bi-eye"></i>
+                                            <span> View Product </span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="product-card-body"> <span class="product-category">
                                         {{ $product->category?->name ?? 'Uncategorized' }} @if ($product->brand)
