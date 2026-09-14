@@ -1,0 +1,7 @@
+.product-view-gallery {
+    display: grid;
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 16px;
+    position: sticky;
+    top: 25px;
+}

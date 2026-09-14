@@ -1,0 +1,30 @@
+.product-view-shipping {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-view-shipping > div {
+    padding: 30px;
+    border: 1px solid #e5e1da;
+    background: #faf9f6;
+}
+
+.product-view-shipping i {
+    color: #b08a45;
+    font-size: 25px;
+}
+
+.product-view-shipping h3 {
+    margin: 20px 0 9px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-view-shipping p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}

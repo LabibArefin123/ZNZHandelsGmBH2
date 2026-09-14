@@ -1,0 +1,70 @@
+.product-view-actions {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.product-view-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex: 1;
+    min-height: 54px;
+    padding: 0 25px;
+    border: 1px solid #171717;
+    background: #171717;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.product-view-cart:hover {
+    background: #b08a45;
+    border-color: #b08a45;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(176, 138, 69, 0.18);
+}
+
+.product-view-cart.added {
+    background: #66805c;
+    border-color: #66805c;
+}
+
+.product-view-wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    min-width: 54px;
+    height: 54px;
+    border: 1px solid #ddd8d1;
+    background: #fff;
+    color: #333;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-view-wishlist i {
+    display: block;
+    font-size: 18px;
+    line-height: 1;
+    font-family: "bootstrap-icons" !important;
+    font-style: normal;
+}
+
+.product-view-wishlist:hover,
+.product-view-wishlist.active {
+    border-color: #b08a45;
+    color: #b08a45;
+}
+
+.product-view-wishlist.active i {
+    color: inherit;
+}

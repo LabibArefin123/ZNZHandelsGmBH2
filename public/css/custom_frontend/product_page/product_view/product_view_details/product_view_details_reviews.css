@@ -1,0 +1,46 @@
+.product-view-review-summary{
+display:grid;
+grid-template-columns:270px 1fr;
+gap:60px;
+align-items:center;
+}
+.product-view-review-score{
+padding:30px;
+text-align:center;
+border:1px solid #e5e1da;
+background:#faf9f6;
+}
+.product-view-review-score>strong{
+display:block;
+color:#171717;
+font-family:Georgia,"Times New Roman",serif;
+font-size:48px;
+font-weight:400;
+}
+.product-view-review-score .product-stars{
+justify-content:center;
+margin:10px 0;
+}
+.product-view-review-score>span{
+color:#999;
+font-size:10px;
+}
+.product-view-review-message>span{
+color:#b08a45;
+font-size:9px;
+font-weight:700;
+letter-spacing:1.7px;
+}
+.product-view-review-message h3{
+margin:10px 0;
+color:#222;
+font-family:Georgia,"Times New Roman",serif;
+font-size:28px;
+font-weight:400;
+}
+.product-view-review-message p{
+max-width:600px;
+color:#777;
+font-size:13px;
+line-height:1.9;
+}

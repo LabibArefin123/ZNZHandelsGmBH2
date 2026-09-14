@@ -1,0 +1,51 @@
+.product-image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(15, 15, 15, 0.96);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.product-image-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-image-modal img {
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    transform: scale(0.94);
+    transition: transform 0.4s ease;
+}
+
+.product-image-modal.show img {
+    transform: scale(1);
+}
+
+.product-image-modal button {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-image-modal button:hover {
+    background: #fff;
+    color: #111;
+}
