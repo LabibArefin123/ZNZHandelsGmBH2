@@ -12,7 +12,7 @@
         @hasSection('title')
             @yield('title')
         @else
-            {{ config('app.name', 'ZNZ Handels GMBH') }}
+            {{ config('app.name', 'ZNZ Handels GmbH') }}
         @endif
     </title>
     <link rel="stylesheet" href="{{ asset('css/custom_frontend/frontend.css') }}">

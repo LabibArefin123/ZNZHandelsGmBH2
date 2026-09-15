@@ -6,7 +6,7 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background-color: #ff6b6b; /* Bootstrap danger */
+    background-color: #bfd405; /* Bootstrap danger */
     color: #fff;
     border: none;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 .back-to-top:hover {
-    background-color: #b02a37;
+    background-color: #a29b92;
     transform: translateY(-4px);
 }
 

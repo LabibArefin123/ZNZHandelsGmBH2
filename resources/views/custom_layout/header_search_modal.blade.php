@@ -6,7 +6,7 @@
 
             <div class="modal-header">
                 <div class="header-modal-heading">
-                    <span>ZNZ HANDELS GMBH</span>
+                    <span>ZNZ Handels GmbH</span>
                     <h2 id="headerSearchModalLabel">Find a Product</h2>
                 </div>
 

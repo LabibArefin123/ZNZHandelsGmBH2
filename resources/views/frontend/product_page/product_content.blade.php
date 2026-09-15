@@ -227,6 +227,11 @@
     </div>
 </section>
 
-<script src="{{ asset('js/custom_frontend/product_page/product_filter.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/product_page/product_filter/product_filter_state.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/product_page/product_filter/product_filter_core.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/product_page/product_filter/product_filter_buttons.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/product_page/product_filter/product_filter_search.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/product_page/product_filter/product_filter_reset.js') }}"></script>
+<script src="{{ asset('js/custom_frontend/product_page/product_filter/product_filter_init.js') }}"></script>
 <script src="{{ asset('js/custom_frontend/product_page/product_animation.js') }}"></script>
 <script src="{{ asset('js/custom_frontend/product_page/product_ui.js') }}"></script>

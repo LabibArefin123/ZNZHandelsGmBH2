@@ -1,7 +1,7 @@
 <section class="about-hero">
     <div class="container">
         <div class="about-hero-content">
-            <span class="about-eyebrow">ZNZ HANDELS GMBH</span>
+            <span class="about-eyebrow">ZNZ Handels GmbH</span>
             <h1>Connecting quality with <em>global opportunity.</em></h1>
             <p>Your trusted partner for sourcing, quality and reliable trade solutions across the global textile
                 industry.</p>
