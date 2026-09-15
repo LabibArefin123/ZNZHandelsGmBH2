@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Banner;
+use App\Models\Partner;
+use App\Models\News;
+use App\Models\Blog;
 use App\Models\AboutStory;
 use App\Models\AboutValue;
 use App\Models\AboutGlobalTrade;
@@ -11,14 +15,17 @@ use App\Models\Product;
 use App\Models\ProductBrand;
 use App\Models\ProductCategory;
 use App\Models\ProductSize;
-use App\Models\Blog;
-use App\Models\News;
+
 use App\Models\WelcomeCategory;
 
 class PageController extends Controller
 {
     public function home()
     {
+        $banners = Banner::where('is_active', true)
+            ->orderBy('sort_order')
+            ->get();
+
         $categories = WelcomeCategory::where('status', true)
             ->orderBy('sort_order')
             ->get();
@@ -28,7 +35,11 @@ class PageController extends Controller
             ->take(3)
             ->get();
 
-        return view('frontend.welcome_page.welcome', compact('categories', 'news'));
+        $partners = Partner::where('is_active', true)
+            ->orderBy('sort_order')
+            ->get();
+
+        return view('frontend.welcome_page.welcome', compact('categories', 'news', 'partners', 'banners'));
     }
 
     public function about()

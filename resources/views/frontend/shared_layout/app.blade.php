@@ -47,7 +47,7 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to Top">
         <i class="bi bi-arrow-up"></i>
     </button>
-    
+
     <script src="{{ asset('js/custom_frontend/custom_back_top_button.js') }}"></script>
     <script src="{{ asset('js/custom_frontend/scroll_progress.js') }}"></script>
     {{-- End of SweetAlert2 notifications --}}

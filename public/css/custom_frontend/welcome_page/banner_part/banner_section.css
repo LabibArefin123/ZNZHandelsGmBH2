@@ -1,60 +1,121 @@
 /* =========================================================
-   BANNER SECTION
+   PREMIUM BANNER SECTION
 ========================================================= */
 
 #heroCarousel {
     position: relative;
     width: 100%;
     overflow: hidden;
-    background: #f8f8f8;
+    background: #f7f5f1;
 }
 
 #heroCarousel .carousel-inner {
     width: 100%;
-    height: 100%;
+    overflow: hidden;
 }
 
 #heroCarousel .carousel-item {
     position: relative;
-    min-height: 100vh;
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
+    height: calc(100vh - 82px);
+    min-height: 680px;
+    overflow: hidden;
 }
 
-#heroCarousel .carousel-item::before {
-    content: "";
+#heroCarousel .banner-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#heroCarousel .banner-image {
+    position: absolute;
+    top: 0;
+    right: -4%;
+    width: 72%;
+    height: 100%;
+    background-position: 78% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transform: scale(1.02);
+}
+
+#heroCarousel .banner-overlay {
     position: absolute;
     inset: 0;
+    z-index: 1;
+    pointer-events: none;
     background: linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 255, 255, 0.72) 32%,
-        rgba(255, 255, 255, 0.25) 68%,
-        rgba(255, 255, 255, 0.05) 100%
+        #f7f5f1 0%,
+        rgba(247, 245, 241, 0.99) 19%,
+        rgba(247, 245, 241, 0.94) 31%,
+        rgba(247, 245, 241, 0.68) 45%,
+        rgba(247, 245, 241, 0.24) 62%,
+        rgba(247, 245, 241, 0.03) 78%,
+        rgba(247, 245, 241, 0) 100%
     );
-    z-index: 1;
 }
 
-#heroCarousel .carousel-item > .container {
+#heroCarousel .banner-container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
 }
 
 #heroCarousel .carousel-item .row {
-    min-height: 100vh;
+    height: 100%;
 }
 
-#heroCarousel .carousel-item.active {
-    animation: bannerFadeIn 0.8s ease both;
+#heroCarousel .carousel-item.active .banner-image {
+    animation: bannerImageReveal 1.1s ease both;
 }
 
-@keyframes bannerFadeIn {
+#heroCarousel .carousel-item.active .banner-content {
+    animation: bannerContentReveal 0.9s ease both;
+}
+
+#heroCarousel .banner-slide-number {
+    position: absolute;
+    left: 48px;
+    bottom: 34px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+#heroCarousel .banner-slide-line {
+    width: 38px;
+    height: 1px;
+    background: rgba(17, 17, 17, 0.3);
+}
+
+@keyframes bannerImageReveal {
     from {
-        opacity: 0.65;
+        opacity: 0;
+        transform: scale(1.07);
     }
+
     to {
         opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes bannerContentReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

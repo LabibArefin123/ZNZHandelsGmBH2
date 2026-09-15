@@ -1,69 +1,45 @@
 /* =========================================================
-   BANNER CONTROLS
+   BANNER SOCIAL LINKS
 ========================================================= */
 
-#heroCarousel .carousel-control-prev,
-#heroCarousel .carousel-control-next {
-    top: 50%;
-    bottom: auto;
-    width: 52px;
-    height: 52px;
-    margin-top: -26px;
-    opacity: 1;
-    z-index: 5;
-    border: 1px solid rgba(17, 17, 17, 0.18);
+#heroCarousel .banner-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#heroCarousel .banner-social::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    margin-right: 5px;
+    background: rgba(17, 17, 17, 0.25);
+}
+
+#heroCarousel .banner-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    color: #252525;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(17, 17, 17, 0.14);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: all 0.3s ease;
 }
 
-#heroCarousel .carousel-control-prev {
-    left: 28px;
+#heroCarousel .banner-social a:hover {
+    color: #fff;
+    background: #151515;
+    border-color: #151515;
+    transform: translateY(-3px);
 }
 
-#heroCarousel .carousel-control-next {
-    right: 28px;
-}
-
-#heroCarousel .carousel-control-prev:hover,
-#heroCarousel .carousel-control-next:hover {
-    background: #111;
-    border-color: #111;
-    transform: scale(1.06);
-}
-
-#heroCarousel .carousel-control-prev-icon,
-#heroCarousel .carousel-control-next-icon {
-    width: 18px;
-    height: 18px;
-    background-size: 100% 100%;
-    filter: brightness(0);
-    transition: filter 0.3s ease;
-}
-
-#heroCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
-#heroCarousel .carousel-control-next:hover .carousel-control-next-icon {
-    filter: brightness(0) invert(1);
-}
-
-#heroCarousel .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
-}
-
-#heroCarousel .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-}
-
-#heroCarousel .visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
+#heroCarousel .banner-social i {
+    font-size: 13px;
+    line-height: 1;
 }
